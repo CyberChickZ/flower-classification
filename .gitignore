@@ -177,3 +177,9 @@ cython_debug/
 flowers_5/
 
 .DS_Store
+
+# Ignore all JPG pic
+.jpg
+
+# Data file
+data/
