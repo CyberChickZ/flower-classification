@@ -12,39 +12,62 @@ This project is a simple yet complete image classification pipeline to identify 
 - Optional GUI (PyQt5) and ONNX export (to be added)
 
 ## File Structure
-
-├── data_split.py          # Split dataset into train/val/test  
-├── train.py               # Train the model and save weights  
-├── predict.py             # Predict flower class from image input  
-├── flower_resnet18.pth    # Trained model (generated after training)  
-├── README.md              # Project documentation  
+```
+├── data_split.py # Split dataset into train/val/test
+├── train.py # Train the model and save weights
+├── predict.py # Predict flower class from image input
+├── flower_resnet18.pth # Trained model (generated after training)
+├── flowers_5/ # Raw image folders for 5 flower classes
+│ ├── daisy/
+│ ├── dandelion/
+│ ├── roses/
+│ ├── sunflowers/
+│ └── tulips/
+├── data/ # Generated train/val/test folders after split
+│ ├── train/
+│ ├── val/
+│ └── test/
+└── README.md # Project documentation 
+```
 
 ## Quick Start
 
-1. (Optional) Create and activate a conda environment  
+1. (Optional) Create and activate a conda environment
+   ```
    conda create -n flower-env python=3.9  
-   conda activate flower-env  
+   conda activate flower-env
+   ```
 
-2. Install dependencies  
-   pip install torch torchvision matplotlib scikit-learn  
+3. Install dependencies
+   ``` 
+   pip install torch torchvision matplotlib scikit-learn
+   ```
 
-3. Prepare dataset  
+5. Prepare dataset  
    Organize your image folders like this:
+   ```
    flowers_5/
        ├── daisy/
        ├── dandelion/
        ├── roses/
        ├── sunflowers/
        └── tulips/
+   ```
    
-   Then run:  
-   python data_split.py  
+   Then run:
+   ```
+   python data_split.py
+   ```  
 
-4. Train model  
-   python train.py  
+7. Train model
+   ```
+   python train.py
+   ```
 
-5. Predict on a new image  
+9. Predict on a new image
+   ``` 
    python predict.py --image path/to/your_flower.jpg
+   ```
 
 ## Requirements
 
